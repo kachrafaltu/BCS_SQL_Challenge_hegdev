@@ -1,0 +1,36 @@
+Departments
+-
+dept_no string PK
+dept_name string
+
+Titles
+-
+title_id string PK
+title string
+
+Employees
+-
+emp_no Int PK
+emp_title_id string FK >- Titles.title_id
+birth_date Date
+first_name string
+last_name string
+sex string
+hire_date Date
+
+
+Dept_Emp
+-
+emp_no Int FK >- Employees.emp_no
+dept_no string FK >- Departments.dept_no
+
+Dept_Manager
+-
+dept_no string FK >- Departments.dept_no
+emp_no Int FK >- Employees.emp_no
+
+Salaries
+-
+emp_no Int FK >- Employees.emp_no
+salary float
+
